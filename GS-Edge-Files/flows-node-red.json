@@ -1,0 +1,1021 @@
+[
+    {
+        "id": "2eb8f219be768740",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "db93f9c61bbd53b4",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e68ad050cb074424",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Palatino Linotype,Palatino,Book Antiqua,serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Tema Sunny - Oficial",
+                "default": "#4B7930",
+                "baseColor": "#fff700",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#fff700",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#ffc800",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#fef69a",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#fff8a8",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#ffc800",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#ffc800",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#eeb25d",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#f1ed7e",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Monitoramento - Solar Tracker",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "49760edf7d7cbfb8",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "COM2",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "d1604a6c474619e3",
+        "type": "ui_tab",
+        "name": "Monitoramento Sensores - Solar Tracker",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "de45b24d41c4d605",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "trabalhogs",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fe0ca3f641479df6",
+        "type": "ui_group",
+        "name": "Luminosidade ☀️",
+        "tab": "d1604a6c474619e3",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5555503da11358e5",
+        "type": "ui_group",
+        "name": "Posição Motores",
+        "tab": "d1604a6c474619e3",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ec3d9232e9833b0f",
+        "type": "ui_group",
+        "name": "Modo Rastreamento",
+        "tab": "d1604a6c474619e3",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ca9b7c7f353e6e9b",
+        "type": "ui_group",
+        "name": "Visualização dos Dados",
+        "tab": "d1604a6c474619e3",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ae3578bcefc855ea",
+        "type": "serial in",
+        "z": "2eb8f219be768740",
+        "name": "COM2",
+        "serial": "49760edf7d7cbfb8",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "40ed1abc30774b82"
+            ]
+        ]
+    },
+    {
+        "id": "40ed1abc30774b82",
+        "type": "json",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 590,
+        "y": 340,
+        "wires": [
+            [
+                "8871ea0b01e5cc57",
+                "214e918e6fa62725",
+                "41fa491540e9b6c2",
+                "5d3d4759a0224db9",
+                "11d324171531a8d5",
+                "3c0b8c61ae514d7b",
+                "6ecf59ec47053d6a"
+            ]
+        ]
+    },
+    {
+        "id": "8871ea0b01e5cc57",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "data_to_mqtt",
+        "func": "var jsonLDRSupEsq = msg.payload.LDR_SUP_ESQ;  \nvar jsonLDRSupDir = msg.payload.LDR_SUP_DIR;  \nvar jsonLDRInfEsq = msg.payload.LDR_INF_ESQ;  \nvar jsonLDRInfDir = msg.payload.LDR_INF_DIR;  \nvar jsonServoHorizontal = msg.payload.ANGULO_SERVO_HORIZONTAL;  \nvar jsonServoVertical = msg.payload.ANGULO_SERVO_VERTICAL;  \n\nflow.set('dadosLDRSuperiorEsquerdo', jsonLDRSupEsq);\nflow.set('dadosLDRSuperiorDireito', jsonLDRSupDir);\nflow.set('dadosLDRInferiorEsquerdo', jsonLDRInfEsq);\nflow.set('dadosLDRInferiorDireito', jsonLDRInfDir);\nflow.set('dadosServoHorizontal', jsonServoHorizontal);\nflow.set('dadosServoVertical', jsonServoVertical);\n\nmsg.payload = {\n    LDR_SUP_ESQ: jsonLDRSupEsq,\n    LDR_SUP_DIR: jsonLDRSupDir,\n    LDR_INF_ESQ: jsonLDRInfEsq,\n    LDR_INF_DIR: jsonLDRInfDir,\n    ANGULO_SERVO_HORIZONTAL: jsonServoHorizontal,\n    ANGULO_SERVO_VERTICAL: jsonServoVertical\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 120,
+        "wires": [
+            [
+                "b6bcf96f012db965"
+            ]
+        ]
+    },
+    {
+        "id": "b6bcf96f012db965",
+        "type": "mqtt out",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "topic": "globalsolution/medicoes_solarTracker_Wendell_1ESR_2024",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "de45b24d41c4d605",
+        "x": 1360,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "20733e17899baf4c",
+        "type": "ui_switch",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "label": "Receber Dados",
+        "tooltip": "",
+        "group": "fe0ca3f641479df6",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 720,
+        "y": 680,
+        "wires": [
+            [
+                "b9308853c394e75a"
+            ]
+        ]
+    },
+    {
+        "id": "214e918e6fa62725",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "receive_data_LDR_SUP_ESQ",
+        "func": "var isEnable = flow.get(\"enableData_LDRSupEsq\");\nif(isEnable == true){\n    msg.payload =  flow.get(\"dadosLDRSuperiorEsquerdo\");\n    return msg;\n}\nelse{\n    msg.payload = null\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 200,
+        "wires": [
+            [
+                "dd3000c4686f7f66"
+            ]
+        ]
+    },
+    {
+        "id": "2e43a9962e0ce619",
+        "type": "ui_gauge",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "group": "5555503da11358e5",
+        "order": 3,
+        "width": "12",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Valor Servo Motor - Vertical",
+        "label": "Graus",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1340,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5ff08110114179f0",
+        "type": "ui_gauge",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "group": "5555503da11358e5",
+        "order": 1,
+        "width": "12",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Valor Servo Motor - Horizontal",
+        "label": "Graus",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1350,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "28f0ed39864f3dd7",
+        "type": "ui_gauge",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "group": "fe0ca3f641479df6",
+        "order": 6,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Valor LDR - Inferior Direito",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1050",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1340,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1de6cf8ef97a7192",
+        "type": "ui_gauge",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "group": "fe0ca3f641479df6",
+        "order": 5,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Valor LDR - Inferior Esquerdo",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1050",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1340,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3abefd1331fddf2b",
+        "type": "ui_gauge",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "group": "fe0ca3f641479df6",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Valor LDR - Superior Direito",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1050",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1340,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "41fa491540e9b6c2",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "receive_data_LDR_SUP_DIR",
+        "func": "var isEnable = flow.get(\"enableData_LDRSupDir\");\nif (isEnable == true) {\n    msg.payload = flow.get(\"dadosLDRSuperiorDireito\");\n    return msg;\n}\nelse {\n    msg.payload = null\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 260,
+        "wires": [
+            [
+                "3abefd1331fddf2b"
+            ]
+        ]
+    },
+    {
+        "id": "5d3d4759a0224db9",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "receive_data_LDR_INF_ESQ",
+        "func": "var isEnable = flow.get(\"enableData_LDRInfEsq\");\nif (isEnable == true) {\n    msg.payload = flow.get(\"dadosLDRInferiorEsquerdo\");\n    return msg;\n}\nelse {\n    msg.payload = null\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 340,
+        "wires": [
+            [
+                "1de6cf8ef97a7192"
+            ]
+        ]
+    },
+    {
+        "id": "11d324171531a8d5",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "receive_data_LDR_INF_DIR",
+        "func": "var isEnable = flow.get(\"enableData_LDRInfDir\");\nif (isEnable == true) {\n    msg.payload = flow.get(\"dadosLDRInferiorDireito\");\n    return msg;\n}\nelse {\n    msg.payload = null\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 420,
+        "wires": [
+            [
+                "28f0ed39864f3dd7"
+            ]
+        ]
+    },
+    {
+        "id": "3c0b8c61ae514d7b",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "receive_data_ServoHorizontal",
+        "func": "var isEnable = flow.get(\"enableData_ServoHorizontal\");\nif (isEnable == true) {\n    msg.payload = flow.get(\"dadosServoHorizontal\");\n    return msg;\n}\nelse {\n    msg.payload = null\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 500,
+        "wires": [
+            [
+                "5ff08110114179f0"
+            ]
+        ]
+    },
+    {
+        "id": "6ecf59ec47053d6a",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "receive_data_ServoVertical",
+        "func": "var isEnable = flow.get(\"enableData_ServoVertical\");\nif (isEnable == true) {\n    msg.payload = flow.get(\"dadosServoVertical\");\n    return msg;\n}\nelse {\n    msg.payload = null\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 580,
+        "wires": [
+            [
+                "2e43a9962e0ce619"
+            ]
+        ]
+    },
+    {
+        "id": "021a1462d1945172",
+        "type": "ui_switch",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "label": "Receber Dados",
+        "tooltip": "",
+        "group": "fe0ca3f641479df6",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 720,
+        "y": 740,
+        "wires": [
+            [
+                "04ad7ac4ace269d8"
+            ]
+        ]
+    },
+    {
+        "id": "10e791bd63b07dda",
+        "type": "ui_switch",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "label": "Receber Dados",
+        "tooltip": "",
+        "group": "fe0ca3f641479df6",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 720,
+        "y": 820,
+        "wires": [
+            [
+                "72a776531315dc01"
+            ]
+        ]
+    },
+    {
+        "id": "6d05c323733c5072",
+        "type": "ui_switch",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "label": "Receber Dados",
+        "tooltip": "",
+        "group": "fe0ca3f641479df6",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 720,
+        "y": 900,
+        "wires": [
+            [
+                "ec448ab64f7e7cda"
+            ]
+        ]
+    },
+    {
+        "id": "87d68356bbab3945",
+        "type": "ui_switch",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "label": "Receber Dados",
+        "tooltip": "",
+        "group": "5555503da11358e5",
+        "order": 2,
+        "width": "12",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 720,
+        "y": 980,
+        "wires": [
+            [
+                "699b39ac88daa012"
+            ]
+        ]
+    },
+    {
+        "id": "15391492f3cf54f1",
+        "type": "ui_switch",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "label": "Receber Dados",
+        "tooltip": "",
+        "group": "5555503da11358e5",
+        "order": 5,
+        "width": "12",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 720,
+        "y": 1060,
+        "wires": [
+            [
+                "0ecf8a6450f776f6"
+            ]
+        ]
+    },
+    {
+        "id": "ae4975d04211376b",
+        "type": "ui_switch",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "label": "Habilitar/Desabilitar",
+        "tooltip": "",
+        "group": "ca9b7c7f353e6e9b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 430,
+        "y": 820,
+        "wires": [
+            [
+                "20733e17899baf4c",
+                "021a1462d1945172",
+                "10e791bd63b07dda",
+                "6d05c323733c5072",
+                "87d68356bbab3945",
+                "15391492f3cf54f1"
+            ]
+        ]
+    },
+    {
+        "id": "b9308853c394e75a",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "enableData_LDRSupEsq",
+        "func": "var isEnabled = msg.payload;\nflow.set(\"enableData_LDRSupEsq\", isEnabled)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04ad7ac4ace269d8",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "enableData_LDRSupDir",
+        "func": "var isEnabled = msg.payload;\nflow.set(\"enableData_LDRSupDir\", isEnabled)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72a776531315dc01",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "enableData_LDRInfDir",
+        "func": "var isEnabled = msg.payload;\nflow.set(\"enableData_LDRInfDir\", isEnabled)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec448ab64f7e7cda",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "enableData_LDRInfEsq",
+        "func": "var isEnabled = msg.payload;\nflow.set(\"enableData_LDRInfEsq\", isEnabled)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "699b39ac88daa012",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "enableData_ServoHorizontal",
+        "func": "var isEnabled = msg.payload;\nflow.set(\"enableData_ServoHorizontal\", isEnabled)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ecf8a6450f776f6",
+        "type": "function",
+        "z": "2eb8f219be768740",
+        "name": "enableData_ServoVertical",
+        "func": "var isEnabled = msg.payload;\nflow.set(\"enableData_ServoVertical\", isEnabled)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd3000c4686f7f66",
+        "type": "ui_gauge",
+        "z": "2eb8f219be768740",
+        "name": "",
+        "group": "fe0ca3f641479df6",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Valor LDR - Superior Esquerdo",
+        "label": "Lux",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1050",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1350,
+        "y": 200,
+        "wires": [],
+        "info": "_"
+    },
+    {
+        "id": "9edef1b57ff4d29d",
+        "type": "mqtt in",
+        "z": "db93f9c61bbd53b4",
+        "name": "",
+        "topic": "globalsolution/medicoes_solarTracker_Wendell_1ESR_2024",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "de45b24d41c4d605",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "cbd5fb8111071943"
+            ]
+        ]
+    },
+    {
+        "id": "cbd5fb8111071943",
+        "type": "function",
+        "z": "db93f9c61bbd53b4",
+        "name": "setDadosRecebidosMqtt",
+        "func": "flow.set(\"dadosRecebidosMqttSensores\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4569c8f248a188f5",
+        "type": "http in",
+        "z": "db93f9c61bbd53b4",
+        "name": "",
+        "url": "/api/dados-sensores",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 260,
+        "wires": [
+            [
+                "b526d93ea83c7e53"
+            ]
+        ]
+    },
+    {
+        "id": "b526d93ea83c7e53",
+        "type": "function",
+        "z": "db93f9c61bbd53b4",
+        "name": "getDadosRecebidosMqtt",
+        "func": "msg.payload =  flow.get(\"dadosRecebidosMqttSensores\")\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 260,
+        "wires": [
+            [
+                "1937935b9294a10e"
+            ]
+        ]
+    },
+    {
+        "id": "1937935b9294a10e",
+        "type": "http response",
+        "z": "db93f9c61bbd53b4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 260,
+        "wires": []
+    }
+]
