@@ -13,9 +13,11 @@ O rastreador solar utiliza:
 O objetivo é melhorar a eficiência de painéis solares ao garantir alinhamento dinâmico com a luz solar.
 
 📂 Estrutura do Repositório
-/src: Código-fonte do firmware em Arduino (C/C++).
-/build/arduino.avr.uno: Arquivo .hex do firmware gerado.
-/flows-node-red.json: Fluxo do Node-RED para monitoramento.
+/GS-Edge-Files/sketch_nov11a/sketch_nov11a.ino: Código-fonte do firmware em Arduino (C/C++).
+/GS-Edge-Files/sketch_nov11a/build/arduino.avr.uno/sketch_nov11a.ino.hex: Arquivo .hex do firmware gerado.
+/GS-Edge-Files/flows-node-red.json: Fluxo do Node-RED para monitoramento.
+/GS-Edge-Files/circuito.sim1: Circuito desenvolvido para ser simulado no software Simullide
+
 🚀 Passos para Configuração e Execução
 1. Configuração do Firmware no Arduino
 Abra o código-fonte na IDE do Arduino.
